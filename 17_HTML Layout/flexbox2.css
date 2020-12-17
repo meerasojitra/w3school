@@ -1,0 +1,30 @@
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .flex-container > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+  
+  .main {
+    text-align: left;
+    background: cornflowerblue;
+  }
+  
+  .header {background: coral;}
+  .footer {background: lightgreen;}
+  .aside {background: moccasin;}
+  
+  @media all and (min-width: 768px) {
+    .aside { flex: 1 auto; }
+    .main    { flex: 3 0px; }
+    .aside { order: 1; } 
+    .main    { order: 2; }
+    .footer  { order: 4; }
+  }
